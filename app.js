@@ -14,7 +14,7 @@ function agregarAmigo() {
     botonAgregar.disabled = true;
 }
 
-// Funcion para actualizar la lista
+// Funcion para actualizar de lista
 function actualizarLista() {
     const lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
@@ -34,18 +34,9 @@ function sortearAmigo() {
         let li = document.createElement("li");
         li.textContent = "Tu amigo secreto es: " + ganador;
         resultado.appendChild(li);
-
-// Limpiar la lista después del sorteo
-      
-      limpiarLista();
     } else {
         alert("Agrega al menos un participante para realizar el sorteo.");
     }
-}
-
-function limpiarLista() {
-    amigos = [];
-    actualizarLista();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
